@@ -4,11 +4,12 @@ def get_first_name_of_season_winner(data, season)
   data.each do |season_number, contestants|
     if season_number == season.to_sym
       contestants.each do |contestant| 
-        contestant.each do |attribute, details|
-          if contestant[attribute] == "Winner"
-            return contestant[:"name"].partition(" ").first
-          end
-        end
+        return contestant
+        #contestant.each do |attribute, details|
+         # if contestant[attribute] == "Winner"
+          #  return contestant[:"name"].partition(" ").first
+          #end
+      #  end
       end
     end
   end
