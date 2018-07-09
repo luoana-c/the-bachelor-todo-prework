@@ -5,10 +5,9 @@ def get_first_name_of_season_winner(data, season)
     if season_number == season
       contestants.each do |contestant| 
         contestant.each do |attribute, details|
-          return contestant[attribute]
-         # if  == "Winner"
-          #  return contestant[:"name"].partition(" ").first
-          #end
+          if contestant[attribute] == "Winner"
+            return contestant["name"]
+          end
         end
       end
     end
