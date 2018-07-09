@@ -1,3 +1,4 @@
+
 def get_first_name_of_season_winner(data, season)
   data.each do |season_number, contestants|
     if season_number == season.to_sym
