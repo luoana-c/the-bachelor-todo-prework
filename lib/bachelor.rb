@@ -38,9 +38,10 @@ def get_occupation(data, hometown)
         if contestant[attribute] == hometown
           number_of_contestants += 1 
         end
-        return number_of_contestants
+        
       end
     end
+    return number_of_contestants
   end
 end
 
