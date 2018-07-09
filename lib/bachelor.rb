@@ -58,11 +58,11 @@ def get_average_age_for_season(data, season)
     if season_number == season
       contestants.each do |contestant| 
         contestant.each do |attribute, details|
-          age.push(contestant["age"].to_f)
+          age.push(contestant["age"])
         end
       end
     end
   end
-  average_age = age.inject{ |sum, el| sum + el } / age.size
+  average_age = age.inject{ |sum, el| sum + el }.to_i / age.size
   return average_age
 end
